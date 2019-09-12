@@ -51,15 +51,14 @@ public class TK1W3S4R1 {
     }
 
     private static void examNoFive(int[] val) {
+        int min = val[0];
+        int max = val[1];
         Random rand = new Random();
-        int random = rand.nextInt(val[1]);
-        double value =random;
-        String mod = "Genap";
+        int random = rand.nextInt((max-min)+1)+min;
         if(random%2==1){
-            value = value+val[0];
-            mod = "Ganjil";
+            random = random+1;
         }
-        System.out.println("Nilai random bilangan "+mod+" = "+value);
+        System.out.println("Nilai random bilangan genap = "+random);
     }
     
 }
