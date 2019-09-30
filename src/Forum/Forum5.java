@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Solution;
+package Forum;
 
 import java.util.Scanner;
 
@@ -51,11 +51,17 @@ public class Forum5 {
     }
 
     private static void jumpOperation(int num) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int result =0;
+        for(int i = 1;i<=num;i++){
+         if(i%2==0)
+             continue;
+             result = result + i;
+        }
+       System.out.println("Jumlah bilangan ganjil sampai dengan "+num+" adalah "+result);
     }
 
     private static void caseStudy(int num) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
