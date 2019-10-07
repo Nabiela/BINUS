@@ -17,27 +17,28 @@ public class Forum5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Forum Week 5 ");
-        System.out.println("1. Repetetion Operation ");
-        System.out.println("2. Jump Operation ");
-        System.out.println("3. Case study ");
-        System.out.print("Masukan No Diskusi : ");
-        Scanner input = new Scanner(System.in);
-        int diskusi = input.nextInt();
-        System.out.print("Masukan bilangan = ");
-        input = new Scanner(System.in);
-        int num = input.nextInt();
-        switch(diskusi){
-            case 1:
-               repetitionOperations(num);
-                break;
-            case 2:
-                jumpOperation(num);
-                break;
-            case 3 :
-                caseStudy(num);
-                break;
-        }
+//        System.out.println("Forum Week 5 ");
+//        System.out.println("1. Repetetion Operation ");
+//        System.out.println("2. Jump Operation ");
+//        System.out.println("3. Case study ");
+//        System.out.print("Masukan No Diskusi : ");
+//        Scanner input = new Scanner(System.in);
+//        int diskusi = input.nextInt();
+//        System.out.print("Masukan bilangan = ");
+//        input = new Scanner(System.in);
+//        int num = input.nextInt();
+//        switch(diskusi){
+//            case 1:
+//               repetitionOperations(num);
+//                break;
+//            case 2:
+//                jumpOperation(num);
+//                break;
+//            case 3 :
+//                caseStudy(num);
+//                break;
+//        }
+        
     }
     
     private static void repetitionOperations(int num){
