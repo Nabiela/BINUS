@@ -8,7 +8,6 @@ package individu.arraylist;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import javax.xml.bind.ParseConversionEvent;
 
 /**
  *
@@ -20,33 +19,35 @@ public class Main {
      * @param args the command line arguments
      */
     static Scanner input = new Scanner(System.in);
-    
+    static List<Matakuliah> listMatkul = new ArrayList<>();
+    static int pilih;
     public static void main(String[] args) {
-        System.out.println("Pendataan dan Perhitungan IPS (Indeks Prestasi Semester)");
-	System.out.println("1. Pendataan Matakuliah");
-	System.out.println("2. Perhitungan IPS");
-	System.out.println("3. Update Grade");
-	System.out.println("4. Keluar");
-	System.out.print("Masukan Pilihan Anda : ");
-	int pilih = input.nextInt();
-        List<Matakuliah> listMatkul = new ArrayList<>();
-        switch(pilih) {
-            case 1:
-                listMatkul = getData();
-	        break;
-            case 2:
-                listMatkul = getData();
-                perhitunganIps(listMatkul);
-                break;
-            case 3:
-                listMatkul = getData();
-                printUpdateGrade(listMatkul);
-                break;
-            case 4:
-		break;
-            default:
-		System.out.println("Pilihan Anda Tidak Terdaftar!");
-	}
+        while (true){
+            System.out.println(" ");
+            System.out.println("Pendataan dan Perhitungan IPS (Indeks Prestasi Semester)");
+            System.out.println("1. Pendataan Matakuliah");
+            System.out.println("2. Perhitungan IPS");
+            System.out.println("3. Update Grade");
+            System.out.println("4. Keluar");
+            System.out.print("Masukan Pilihan Anda : ");
+            pilih = input.nextInt();
+            switch(pilih) {
+                case 1:
+                    listMatkul = getData();
+                    break;
+                case 2:
+                    perhitunganIps(listMatkul);
+                    break;
+                case 3:
+                    printUpdateGrade(listMatkul);
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Pilihan Anda Tidak Terdaftar!");
+            }
+        }
     }
     
     private static void perhitunganIps(List<Matakuliah> listMatkul){
@@ -62,7 +63,7 @@ public class Main {
             jumlahSksGrade = jumlahSksGrade+(listMatkul.get(i).getSks() * listMatkul.get(i).getConvertGrade());
         }
         
-        Double ips = jumlahSks != 0 && jumlahSksGrade != 0 ? jumlahSksGrade / jumlahSks : 0;
+        Double ips = jumlahSks != 0 ? jumlahSksGrade / jumlahSks : 0;
         result.setListOfMatkul(listMatkul);
         result.setIps(ips);
         return result;
@@ -143,7 +144,6 @@ public class Main {
     }
     
     private static List<Matakuliah> updateData(List<Matakuliah> listMatkul){
-        System.out.println("=================================================");
         System.out.print("Masukkan Kode Matakuliah: ");
         String kode = input.next();
         System.out.print("Masukkan Grade Baru\t: ");
@@ -158,6 +158,7 @@ public class Main {
                     break;
                 }
             }else{
+                 System.exit(0);
                  System.out.println("Invalid Kode ");
                  break;
             }
