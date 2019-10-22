@@ -18,8 +18,8 @@ public static void main(String[] args) {
        int [][]m = new int[5][5];
        try (Scanner scanner = new Scanner(System.in);)
        {
-           for(int i=0;i<6;i++){
-               for(int j=0;j<6;j++){
+           for(int i=0;i<5;i++){
+               for(int j=0;j<5;j++){
                    m[i][j] = scanner.nextInt();
                    if(i > 1 && j > 1){
                        int sum = m[i][j]+m[i][j-1]+m[i][j-2]
