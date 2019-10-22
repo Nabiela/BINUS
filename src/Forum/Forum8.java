@@ -15,7 +15,7 @@ public class Forum8 {
     
 public static void main(String[] args) {
        int maxSum = Integer.MIN_VALUE;
-       int [][]m = new int[6][6];
+       int [][]m = new int[5][5];
        try (Scanner scanner = new Scanner(System.in);)
        {
            for(int i=0;i<6;i++){
